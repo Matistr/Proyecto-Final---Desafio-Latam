@@ -4,6 +4,9 @@ import Home from "@home/Home.jsx";
 import Gallery from "@gallery/Gallery.jsx";
 import Product from "@gallery/Product.jsx";
 import Profile from "@users/Profile.jsx";
+import Login from "@login/login"
+import Register from "@register/Register.jsx"
+import Pedido from "@cart/Cart";
 import Cart from "@cart/Cart.jsx";
 
 import Header from "@home/Header.jsx";
@@ -20,6 +23,9 @@ function App() {
         <Route path="/product/:id" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/menu" element={<Menu />} />
+        <Route path="/register" element ={<Register />}/>
+        <Route path= "/login" element = {<Login />} /> 
       </Routes>
 
       <Footer />
