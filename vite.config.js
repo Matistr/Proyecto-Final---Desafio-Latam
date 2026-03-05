@@ -15,7 +15,9 @@ export default defineConfig({
       '@register': fileURLToPath(new URL('./Frontend/Register', import.meta.url)),
       '@users': fileURLToPath(new URL('./Frontend/Users', import.meta.url)),
       '@img': fileURLToPath(new URL('./src/assets/img', import.meta.url)),
-      '@shared': fileURLToPath(new URL('./src/shared', import.meta.url))
+      '@shared': fileURLToPath(new URL('./src/shared', import.meta.url)),
+      '@data': fileURLToPath(new URL('./src/data', import.meta.url)),
+      '@services': fileURLToPath(new URL('./src/services', import.meta.url))
     },
   },
 })

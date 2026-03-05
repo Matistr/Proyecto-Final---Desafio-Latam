@@ -13,16 +13,19 @@ function Header() {
                     <h1 className="header-title title-font">Mega Burguer</h1>
                 </Link>
                 <div className="icons-header">
-                    <Link to="/profile">
+                    <Link to="/profile" className="tooltip">
                         <Icons.User size={30} className="icons" />
+                        <span className="tooltip-text">Perfil</span>
                     </Link>
 
-                    <Link to="/cart">
+                    <Link to="/cart" className="tooltip">
                         <Icons.Cart size={30} className="icons" />
+                        <span className="tooltip-text">Pedido</span>
                     </Link>
 
-                    <Link to="/menu">
+                    <Link to="/menu" className="tooltip">
                         <Icons.Menu size={30} className="icons" />
+                        <span className="tooltip-text">Menú</span>
                     </Link>
                 </div>
             </nav>

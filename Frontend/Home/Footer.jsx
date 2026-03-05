@@ -1,34 +1,51 @@
 import { Link } from "react-router-dom";
+import { Icons } from "@shared/icons";
 import "@styles/footer.css";
 
 function Footer() {
   return (
     <footer className="footer">
+      <div className="footer-container">
 
-      <div className="footer-content">
-        <div className="footer-about">
-          <h3 className="title-font">Mega Burguer</h3>
-          <p>
-            En Mega Burguer creemos que una hamburguesa no es solo comida,
-            es una experiencia. Ingredientes frescos, sabores intensos y
-            combinaciones únicas que hacen cada mordida inolvidable.
-            ¡La calidad es nuestro ingrediente secreto!
-          </p>
+        {/* MAPA */}
+        <div className="footer-section footer-map">
+          <h3>Encuéntranos</h3>
+          <iframe
+            src="https://www.google.com/maps?q=Santiago,Chile&output=embed"
+            loading="lazy"
+          ></iframe>
         </div>
-        <div className="footer-links">
-          <h4>Atajos</h4>
+
+        {/* NAVEGACIÓN */}
+        <div className="footer-section footer-links">
+          <h3>Navegación</h3>
           <ul>
             <li><Link to="/">Inicio</Link></li>
-            <li><a href="#top">Volver arriba</a></li>
             <li><Link to="/menu">Menú</Link></li>
-            <li><Link to="/cart">Carrito</Link></li>
+            <li><Link to="/pedido">Pedido</Link></li>
+            <li><Link to="/perfil">Perfil</Link></li>
           </ul>
         </div>
-      </div>
-      <div className="footer-bottom">
-        <p>&copy; 2026 Mega Burguer. Todos los derechos reservados.</p>
-      </div>
 
+        {/* REDES */}
+        <div className="footer-section footer-social">
+          <h3>Síguenos</h3>
+          <div className="footer-social-icons">
+            <a href="#">
+              <Icons.Instagram size={28}/>
+            </a>
+            <a href="#">
+              <Icons.Facebook size={28}/>
+            </a>
+            <a href="#">
+              <Icons.Tiktok size={28}/>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="footer-copy">
+        <p>© 2026 Mega Burguer. Todos los derechos reservados.</p>
+      </div>
     </footer>
   );
 }

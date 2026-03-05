@@ -26,3 +26,50 @@ h1:hover {
     align-items: center;
     gap: 20px;
 }
+
+.tooltip{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* TEXTO TOOLTIP */
+.tooltip-text{
+  position: absolute;
+  /*texto debajo del icono*/
+  bottom: -38px; 
+  left: 50%;
+  transform: translateX(-50%) translateY(5px);
+    /*texto a la izquierda del icono*/
+  /* left: -65px;
+  top: 50%;
+  transform: translateY(-50%); */
+  background: rgba(0,0,0,0.85);
+  color: white;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s ease;
+}
+
+/* TRIÁNGULO */
+.tooltip-text::after{
+  content: "";
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent rgba(0,0,0,0.85) transparent;
+}
+
+/* HOVER */
+.tooltip:hover .tooltip-text{
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}

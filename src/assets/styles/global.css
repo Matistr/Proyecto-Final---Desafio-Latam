@@ -37,6 +37,7 @@ html, body {
 .title-font {
     font-family: var(--font-title);
     letter-spacing: 2px;
+    color: black;
 }
 
 /* SLOGAN */

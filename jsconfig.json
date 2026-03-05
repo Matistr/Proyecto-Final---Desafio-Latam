@@ -10,7 +10,9 @@
       "@register/*": ["./Frontend/Register/*"],
       "@users/*": ["./Frontend/Users/*"],
       "@img/*": ["./src/assets/img/*"],
-      "@shared/*": ["./src/shared/*"]
+      "@shared/*": ["./src/shared/*"],
+      "@data/*": ["./src/data/*"],
+      "@services/*": ["./src/services/*"]
     }
   }
 }
