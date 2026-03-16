@@ -5,13 +5,15 @@ const cors = require("cors")
 const path = require("path"); 
 
 
+const Rutas = require('../Backend/src/routes/routes.js');
+
 
 
 const app = express()
 
 app.use(express.json())
 app.use(cors())
-
+app.use('/MegaBurguer', Rutas)
 
 
 const puerto = 2000
